@@ -8,7 +8,8 @@ class Scooter{
     this.scooterStations = [];
   }
 
-  rent(user){
+  rent(user) {
+    //Try to use triple equals instead of double equals when possible
     if (this.charge >= 20 && this.isBroken != true) {
       this.user = user;
       this.station = null;
@@ -22,6 +23,7 @@ class Scooter{
     if (this.stations in scooterStation == false) {
       throw new Error('No such station exists.');
     };
+    //Looks like this needs to be looked at. 'scooter' is undefined
     if (scooter in station.scooters == true) {
       throw new Error('Scooter is already at this station.');
     };

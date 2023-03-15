@@ -9,11 +9,13 @@ class User{
     this.loggedIn = false
   };
 
-  loggedIn(password){
+  loggedIn(password) {
+    //Is this a comparison? Needs to be triple equals instead of single
     if (password = this.password){
       this.loggedIn = true;
     }else {
       throw new Error('incorrect password');
+      //this line of code isn't necessary
       return false;
     }
   };
